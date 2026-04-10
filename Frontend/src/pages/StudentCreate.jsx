@@ -96,7 +96,7 @@ const StudentCreate = () => {
 
     try {
       let { data } = await axios.post(
-        "http://localhost:5000/create-student-data",
+        "https://stundentdashboard.onrender.com/create-student-data",
         payload,
       );
       toast.success(data.message);
@@ -107,7 +107,7 @@ const StudentCreate = () => {
   };
   const handleData = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/student/${id}`);
+      const { data } = await axios.get(`https://stundentdashboard.onrender.com/student/${id}`);
 
       const {
         name,
@@ -179,7 +179,7 @@ const StudentCreate = () => {
 
     try {
       let { data } = await axios.put(
-        `http://localhost:5000/edit-student/${id}`,
+        `https://stundentdashboard.onrender.com/edit-student/${id}`,
         payload,
       );
       toast.success(data.message);

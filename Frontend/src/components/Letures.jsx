@@ -5,7 +5,7 @@ const Letures = () => {
   const [currentData, setcurrentData] = useState([]);
   const handleData = async () => {
     try {
-      let { data } = await axios.get("http://localhost:5000/student-data");
+      let { data } = await axios.get("https://stundentdashboard.onrender.com/student-data");
       setcurrentData(data);
     } catch (error) {
       console.log(error);

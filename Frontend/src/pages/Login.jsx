@@ -36,7 +36,7 @@ const Login = () => {
     setError(errors);
     if (errors.emailError) return;
     try {
-      let { data } = await axios.post("http://localhost:5000/log-in", payload);
+      let { data } = await axios.post("https://stundentdashboard.onrender.com/log-in", payload);
       if (data.message == "Login succesfully") {
         toast.success(data.message);
         dispatch(setLogin());

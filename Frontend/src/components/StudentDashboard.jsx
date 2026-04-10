@@ -14,7 +14,7 @@ const StudentDashboard = () => {
     setSearch(value);
     setLoding(true);
     const { data } = await axios.get(
-      `http://localhost:5000/student-search?search=${value}`,
+      `https://stundentdashboard.onrender.com/student-search?search=${value}`,
     );
     if (data.message == "Data is successfully search") {
       setcurrentData(data.filterData);
@@ -28,7 +28,7 @@ const StudentDashboard = () => {
   const handleData = async () => {
     setLoding(true);
     try {
-      let res = await axios.get("http://localhost:5000/student-data");
+      let res = await axios.get("https://stundentdashboard.onrender.com/student-data");
       setData(res.data);
       setLoding(false);
     } catch (error) {
@@ -43,7 +43,7 @@ const StudentDashboard = () => {
   const handleDelete = async (_id) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:5000/deleteStudent/${_id}`,
+        `https://stundentdashboard.onrender.com/deleteStudent/${_id}`,
       );
       toast.success(data.message);
       handleData();
@@ -56,7 +56,7 @@ const StudentDashboard = () => {
     setCourse(value);
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/student-course?course=${value}`,
+        `https://stundentdashboard.onrender.com/student-course?course=${value}`,
       );
       if (data.message == "Data is successfully search") {
         setcurrentData(data.filterData);

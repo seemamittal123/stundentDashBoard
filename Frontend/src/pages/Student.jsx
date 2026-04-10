@@ -18,7 +18,7 @@ const Student = () => {
     const handleData = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get(`http://localhost:5000/student/${id}`);
+        const { data } = await axios.get(`https://stundentdashboard.onrender.com/student/${id}`);
         setStudent(data.student);
       } catch (error) {
         console.error(error);
