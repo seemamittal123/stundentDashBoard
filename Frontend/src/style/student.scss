@@ -1,0 +1,209 @@
+@use './variable.scss' as *;
+
+.profile-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: $background;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .profile-top-section {
+    width: 100%;
+    height: 150px;
+    border-bottom-right-radius: 100%;
+    background-image: url('../assets/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+  }
+
+  .details-section {
+    z-index: 2;
+    width: 70%;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.189);
+    background-color: #fff;
+
+    .top-section {
+      display: flex;
+      justify-content: end;
+      padding: 20px;
+      position: relative;
+
+      .profile-image {
+        position: absolute;
+        top: -50px;
+        left: 60px;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.375);
+        overflow: hidden;
+
+        .icon {
+          font-size: 50px;
+          width: 95%;
+          height: 95%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          color: white;
+        }
+
+        .img {
+          object-fit: cover;
+        }
+
+        .name-alphabet {
+          background-color: $primary;
+        }
+
+        .file {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #ffffff62;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          color: $primary;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .file {
+            display: flex;
+          }
+        }
+      }
+
+      .edit-btn {
+        width: 70px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+        font-weight: 600;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .name-section {
+      padding: 15px 45px;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      .name {
+        font-weight: 600;
+        font-size: 23px;
+        margin-bottom: 10px;
+      }
+
+      .course {
+        font-weight: 500;
+      }
+    }
+
+    .info {
+      padding: 20px 40px;
+      border-top: 1px solid rgba(0, 0, 0, 0.081);
+      display: flex;
+      gap: 7px;
+
+      .heading {
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        span {
+          margin-left: 5px;
+          font-size: 18px;
+        }
+      }
+
+      .personal-info,
+      .acadmic-info {
+        width: 50%;
+        padding-right: 5px;
+        border-right: 1px solid rgba(0, 0, 0, 0.166);
+
+        .data {
+          display: flex;
+          justify-content: space-between;
+          font-size: 15px;
+          padding: 0 10px 10px 0;
+          margin-bottom: 15px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.166);
+
+          .attribute {
+            margin-right: 30px;
+            font-weight: 600;
+          }
+
+          .answer {
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .gender-Male {
+            width: 60px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border-radius: 20px;
+            background-color: lightblue;
+            color: blue;
+            font-size: 12px;
+            font-weight: 600;
+          }
+
+          .gender-female {
+            width: 70px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border-radius: 20px;
+            background-color: rgba(128, 0, 0, 0.265);
+            color: maroon;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+
+        .gender {
+          padding: 0 5px 5px 0;
+        }
+      }
+
+      .acadmic-info {
+        border-right: none;
+        padding-right: 0;
+
+        .data {
+          .attribute {
+            display: flex;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}

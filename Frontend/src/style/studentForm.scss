@@ -1,0 +1,137 @@
+@use './variable.scss' as *;
+
+.student-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .form-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.175);
+    background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+    padding: 20px;
+    max-width: 70%;
+
+    h2 {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .forms-wrapper {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .form {
+        border-radius: 7px;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.175);
+        background-color: #fff;
+        width: 45%;
+
+        h3 {
+          font-weight: 600;
+          font-size: 18px;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          i {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: $primary;
+          }
+
+          img {
+            width: 32px;
+          }
+        }
+
+        label {
+          font-weight: 600;
+        }
+
+        .input-wrapper {
+          margin: 15px 0;
+          position: relative;
+
+          input {
+            margin: 10px 0;
+            height: 35px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $secondary;
+
+          }
+
+          p {
+            font-size: 14px;
+            color: red;
+            position: absolute;
+            bottom: -5px;
+          }
+
+          input[type="radio"] {
+            width: 15px;
+            height: 15px;
+            margin: 0px;
+          }
+
+          .inner-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 15px;
+          }
+
+          select {
+            height: 30px;
+            margin-top: 15px;
+            background: transparent;
+            border: 1px solid $secondary;
+            border-radius: 5px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding: 0 10px;
+            margin-bottom: 10px;
+          }
+
+          .arrow {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+          }
+        }
+
+        .submit-btn {
+          width: 100%;
+          height: 40px;
+          background-color: $secondary;
+          color: white;
+          border-radius: 10px;
+        }
+      }
+
+      .inner-form-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .form {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

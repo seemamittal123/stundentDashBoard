@@ -1,0 +1,65 @@
+@use './variable.scss' as *;
+
+.hero {
+  display: flex;
+
+  .sidebar-left-section {
+    position: fixed;
+  }
+
+  .right-section {
+    width: 100%;
+    margin-left: 195px;
+
+    .outlet-section-wrapper {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+      padding: 20px;
+
+      .header-section {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+
+        .input-wrapper {
+          width: 300px;
+          position: relative;
+
+          input {
+            width: 100%;
+            height: 35px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $secondary;
+          }
+
+          button {
+            position: absolute;
+            top: 30%;
+            right: 10px;
+          }
+        }
+
+        .add-student-btn {
+          width: 140px;
+          height: 35px;
+          border-radius: 5px;
+          background-color: $primary;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .filter-option-wrapper{
+          width: 150px;
+          padding: 10px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
